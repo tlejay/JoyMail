@@ -98,3 +98,17 @@ pnpm dev
 - **อย่า import googleapis ใน client component** — typecheck/build จะพังแบบเงียบ ๆ
 - Focus state ต้อง**ชัดเจน** (ขอบ + พื้นหลังส้มอ่อน) เพราะไม่มี hover
 - ห้ามใช้สี gradient / dark mode ใน POC นี้ — เน้น Modern Minimal สีขาว + accent #FF6B00
+
+---
+
+## ⚠️ "สร้างรูป" = `/kiki-herdr-gpt` เสมอ — ไม่ใช่การเขียน HTML
+
+เมื่อ Tle พูดว่า **"สร้างรูป" / "ขอรูป" / "ขอรูปประกอบ" / "วาดภาพ" / "ทำภาพ..."** = สั่ง skill **`/kiki-herdr-gpt`**
+ให้ pane `ChatGPT` ใน herdr generate PNG จริงออกมา แล้วก๊อปไฟล์เข้าโปรเจคนี้
+
+**ห้ามตีความเป็นการทำ HTML/CSS/SVG แล้ว screenshot** — นั่นคือ "หน้าเว็บ" ไม่ใช่ "รูป"
+ถ้าเคสไหนคิดว่าควรใช้ HTML/SVG จริง ๆ (เช่น diagram ที่ต้องแก้ตัวเลขทีหลัง) ให้ถาม Tle ก่อนด้วย `AskUserQuestion` — ห้ามเปลี่ยนวิธีเอง
+
+- ไฟล์ต้นทางออกที่ `~gpt-generated-images/` ที่ root workspace → ก๊อปเข้า `public/` ของโปรเจคนี้
+- อย่าให้ imagegen เขียนตัวอักษรลงในภาพ ถ้าไม่ได้สั่ง — สะกดมั่ว (ใส่ text ทีหลังด้วย HTML/CSS แทน)
+- ถ้าเป็น **"คลิป / วิดีโอ"** → ใช้ `/kiki-herdr-flux` แทน (⚠️ เสียเงินจริง — ยิง draft ให้ Tle ดูก่อนเสมอ)
